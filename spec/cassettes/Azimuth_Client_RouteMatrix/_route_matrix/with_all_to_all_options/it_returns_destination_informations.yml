@@ -1,0 +1,88 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://www.mapquestapi.com/directions/v2/routematrix?key=<API_KEY>
+    body:
+      encoding: UTF-8
+      string: "{\"locations\":[\"48.843079, 2.314442\",\"48.869061, 2.383329\",\"49.000000,
+        2.300000\"],\"options\":{\"allToAll\":true}}"
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Set-Cookie:
+      - JSESSIONID=45696A3B211DA254A8F6D883E5E2D097; Path=/directions/; HttpOnly
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Last-Modified:
+      - Mon, 13 Jan 2014 18:41:03 GMT
+      Cache-Control:
+      - no-cache, must-revalidate
+      Pragma:
+      - no-cache
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '1658'
+      Date:
+      - Mon, 13 Jan 2014 18:41:02 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJhbGxUb0FsbCI6dHJ1ZSwiZGlzdGFuY2UiOltbMCw0LjkwOSwxNy45Njhd
+        LFs1LjEwMywwLDEzLjg0Ml0sWzE0LjQ1NCwxNC4zMjYsMF1dLCJ0aW1lIjpb
+        WzAsMTAxOSwyMTI5XSxbMTA0NiwwLDE5NDZdLFsyMTQ4LDE5NTAsMF1dLCJs
+        b2NhdGlvbnMiOlt7ImxhdExuZyI6eyJsbmciOjIuMzE0NDQyLCJsYXQiOjQ4
+        Ljg0MzA3OX0sImFkbWluQXJlYTQiOiJQYXJpcyIsImFkbWluQXJlYTVUeXBl
+        IjoiQ2l0eSIsImFkbWluQXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVh
+        NSI6IlBhcmlzIiwic3RyZWV0IjoiNSBSdWUgRGFsb3UiLCJhZG1pbkFyZWEx
+        IjoiRlIiLCJhZG1pbkFyZWEzIjoiSWxlLWRlLUZyYW5jZSIsInR5cGUiOiJz
+        IiwiZGlzcGxheUxhdExuZyI6eyJsbmciOjIuMzE0NDQyLCJsYXQiOjQ4Ljg0
+        MzA3OX0sImxpbmtJZCI6MCwicG9zdGFsQ29kZSI6Ijc1MDA3Iiwic2lkZU9m
+        U3RyZWV0IjoiTiIsImRyYWdQb2ludCI6ZmFsc2UsImFkbWluQXJlYTFUeXBl
+        IjoiQ291bnRyeSIsImdlb2NvZGVRdWFsaXR5IjoiQUREUkVTUyIsImdlb2Nv
+        ZGVRdWFsaXR5Q29kZSI6IkwxQUFBIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0
+        ZSJ9LHsibGF0TG5nIjp7ImxuZyI6Mi4zODMzMjksImxhdCI6NDguODY5MDYx
+        fSwiYWRtaW5BcmVhNCI6IlBhcmlzIiwiYWRtaW5BcmVhNVR5cGUiOiJDaXR5
+        IiwiYWRtaW5BcmVhNFR5cGUiOiJDb3VudHkiLCJhZG1pbkFyZWE1IjoiUGFy
+        aXMiLCJzdHJlZXQiOiIxOCBSdWUgZHUgUHJlc3NvaXIiLCJhZG1pbkFyZWEx
+        IjoiRlIiLCJhZG1pbkFyZWEzIjoiSWxlLWRlLUZyYW5jZSIsInR5cGUiOiJz
+        IiwiZGlzcGxheUxhdExuZyI6eyJsbmciOjIuMzgzMzI5LCJsYXQiOjQ4Ljg2
+        OTA2MX0sImxpbmtJZCI6MCwicG9zdGFsQ29kZSI6Ijc1MDExIiwic2lkZU9m
+        U3RyZWV0IjoiTiIsImRyYWdQb2ludCI6ZmFsc2UsImFkbWluQXJlYTFUeXBl
+        IjoiQ291bnRyeSIsImdlb2NvZGVRdWFsaXR5IjoiQUREUkVTUyIsImdlb2Nv
+        ZGVRdWFsaXR5Q29kZSI6IkwxQUFBIiwiYWRtaW5BcmVhM1R5cGUiOiJTdGF0
+        ZSJ9LHsibGF0TG5nIjp7ImxuZyI6Mi4zLCJsYXQiOjQ5fSwiYWRtaW5BcmVh
+        NCI6IlNhcmNlbGxlcyIsImFkbWluQXJlYTVUeXBlIjoiQ2l0eSIsImFkbWlu
+        QXJlYTRUeXBlIjoiQ291bnR5IiwiYWRtaW5BcmVhNSI6IkFuZGlsbHkiLCJz
+        dHJlZXQiOiJSdWUgZGVzIFByw6lzIiwiYWRtaW5BcmVhMSI6IkZSIiwiYWRt
+        aW5BcmVhMyI6IklsZS1kZS1GcmFuY2UiLCJ0eXBlIjoicyIsImRpc3BsYXlM
+        YXRMbmciOnsibG5nIjoyLjMsImxhdCI6NDl9LCJsaW5rSWQiOjAsInBvc3Rh
+        bENvZGUiOiI5NTU4MCIsInNpZGVPZlN0cmVldCI6Ik4iLCJkcmFnUG9pbnQi
+        OmZhbHNlLCJhZG1pbkFyZWExVHlwZSI6IkNvdW50cnkiLCJnZW9jb2RlUXVh
+        bGl0eSI6IkFERFJFU1MiLCJnZW9jb2RlUXVhbGl0eUNvZGUiOiJMMUFBQSIs
+        ImFkbWluQXJlYTNUeXBlIjoiU3RhdGUifV0sIm1hbnlUb09uZSI6ZmFsc2Us
+        ImluZm8iOnsiY29weXJpZ2h0Ijp7InRleHQiOiLCqSAyMDEzIE1hcFF1ZXN0
+        LCBJbmMuIiwiaW1hZ2VVcmwiOiJodHRwOi8vYXBpLm1xY2RuLmNvbS9yZXMv
+        bXFsb2dvLmdpZiIsImltYWdlQWx0VGV4dCI6IsKpIDIwMTMgTWFwUXVlc3Qs
+        IEluYy4ifSwic3RhdHVzY29kZSI6MCwibWVzc2FnZXMiOltdfX0=
+    http_version: 
+  recorded_at: Mon, 13 Jan 2014 18:41:03 GMT
+recorded_with: VCR 2.8.0
