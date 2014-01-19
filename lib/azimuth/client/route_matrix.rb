@@ -22,7 +22,7 @@ module Azimuth
       private
 
       def format_response(response)
-        response.locations.delete_at(0) unless response.allToAll
+        delete_first_location_from_response(response) unless response.allToAll
 
         response.locations.each_with_index.map do |location, i|
           Hashie::Mash.new(
@@ -32,6 +32,12 @@ module Azimuth
             distance: response.distance[i]
           )
         end
+      end
+
+      def delete_first_location_from_response(response)
+        response.locations.delete_at(0)
+        response.time.delete_at(0)
+        response.distance.delete_at(0)
       end
     end
   end
