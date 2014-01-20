@@ -1,4 +1,4 @@
-require 'active_support/core_ext/string/inflections'
+require 'core_ext/hash'
 
 module Azimuth
   # Methods for HTTP requests
@@ -15,7 +15,7 @@ module Azimuth
     private
 
     def request(method, path, params)
-      camelize_options_keys(params[:options])
+      params[:options].camelize_keys! if params[:options]
 
       response = connection.send(method) do |request|
         request.params['key'] = self.api_key
@@ -29,16 +29,6 @@ module Azimuth
       end
 
       response.body
-    end
-
-    def camelize_options_keys(options)
-      return unless options
-
-      camelized_options = options.inject({}) do |opt, v|
-        opt.merge!(v.first.to_s.camelize(:lower) => v.last)
-      end
-
-      options.replace(camelized_options)
     end
   end
 end

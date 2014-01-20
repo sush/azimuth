@@ -28,5 +28,4 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'hashie', '~>2.0.5'
   gem.add_dependency 'json', '~>1.8.1'
   gem.add_dependency 'multi_json', '~>1.8.4'
-  gem.add_dependency 'active_support', '~>3.0.0'
 end

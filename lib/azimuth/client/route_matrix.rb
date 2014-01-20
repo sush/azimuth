@@ -35,9 +35,9 @@ module Azimuth
       end
 
       def delete_first_location_from_response(response)
-        response.locations.delete_at(0)
-        response.time.delete_at(0)
-        response.distance.delete_at(0)
+        [:locations, :time, :distance].each do |info|
+          response.public_send(info).delete_at(0)
+        end
       end
     end
   end
